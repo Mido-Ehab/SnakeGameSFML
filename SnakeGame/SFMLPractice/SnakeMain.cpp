@@ -14,7 +14,7 @@ int main() {
         // Update game state
         game.update();
 
-        // Render game elements
+     // Render game elements
         game.render();
     }
 
