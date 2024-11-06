@@ -11,10 +11,15 @@ using namespace sf;
 /* Class acts as the game engine */
 class Game1 {
 private:
-    // Variables
+    // --------------------------------Variables
     RenderWindow* window;
     VideoMode videoMode;
+    
     Event ev;
+    
+    Font fonts;
+    Text uiText;
+
     bool endGame;
 
     // Snake and Apple
@@ -24,11 +29,30 @@ private:
     int dir; // Snake direction
     bool grow; // Flag to grow snake when it eats an apple
 
+    //----------------------------------------pickups  
+    unsigned points;
+        int health;
+    //--------bonus-----$$$$$$$$$$$$$$$$$
+        point BonusApple; // var from struct datatype
+        bool bonusActive; // trigger to make the pickup appears from time to time
+    //--------Time----------
+        Clock gameClock;
+        int Timer;
+        point timePickup; // var from struct datatype
+        bool Timeboost;   // trigger to make the pickup appears from time to time
+
+
+
     // Private functions
     void inVar(); // Initialize variables
     void createWindow(); // Create game window
     void spawnApple(); // Spawn apple at a random position
+    void initFonts(); //--|Points to Text 
+    void initText(); //--|^^^^^^^^^^^^^^^^
+
     bool checkCollision(); // Check for snake collision
+
+
 
 public:
     // Constructors & Destructors
@@ -42,6 +66,10 @@ public:
     // Functions
     void takeEvents(); // Handle input events
     void updateSnake(); // Update snake movement and logic
+    void updateText();
     void update(); // Update game state
+    
+    void renderText(RenderTarget& target);
     void render(); // Render game objects
+
 };
