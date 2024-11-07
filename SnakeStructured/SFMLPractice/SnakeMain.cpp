@@ -355,35 +355,30 @@ void render(Map& map) {
 void update(Map& map) {
     snakeMoveInterval = milliseconds(1000 / speed);
     if (endGame) {
-
         window->close();
         return;
     }
 
     handleInput();
 
-    float deltaTime = timerClock.restart().asSeconds(); // For smoother movement based on time
+    float deltaTime = timerClock.getElapsedTime().asSeconds(); // For smoother movement based on time
 
-  /*  obstacle1.update(deltaTime);
-    obstacle2.update(deltaTime);*/
+    // Update timer every second
+    if (timerClock.getElapsedTime().asSeconds() >= 1.0f) {
+        Timer--;
+        timerClock.restart();  // Restart the clock after each second
+    }
 
     if (snakeMoveClock.getElapsedTime() >= snakeMoveInterval) {
         updateSnake(map);
         snakeMoveClock.restart();
     }
 
-    if (timerClock.getElapsedTime().asSeconds() >= 1) {
-        Timer--;
-        timerClock.restart();
-    }
-
     checkCollisions(map);
     updateText();
     render(map);
-
-    // Update obstacles' positions
-
 }
+
 
 int main() {
     Map map("Map.txt");
