@@ -1,0 +1,30 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (SFMLPractice.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  SnakeMain.cpp
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(35,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,64): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,64): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,64): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,64): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,64): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,54): warning C4244: 'argument': conversion from 'const int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,54): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,54): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,54): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(37,54): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(39,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(39,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(54,38): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(54,60): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(245,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(255,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(267,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(290,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(323,45): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(323,34): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(329,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(329,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(335,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(335,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(342,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\SFMLPractice\SnakeMain.cpp(342,41): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SFMLPractice.vcxproj -> C:\Users\User\Desktop\ITI\SnackGame\Structured Final\SnakeStructured\Debug\SnakeGame.exe

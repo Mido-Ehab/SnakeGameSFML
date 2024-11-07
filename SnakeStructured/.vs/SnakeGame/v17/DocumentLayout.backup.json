@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\ITI\\SnackGame\\Structured Final\\SnakeStructured\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C6788A42-EB7B-4313-B0DB-560043E60B33}|SFMLPractice\\SFMLPractice.vcxproj|C:\\Users\\User\\Desktop\\ITI\\SnackGame\\Structured Final\\SnakeStructured\\SFMLPractice\\SnakeMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{C6788A42-EB7B-4313-B0DB-560043E60B33}|SFMLPractice\\SFMLPractice.vcxproj|solutionrelative:SFMLPractice\\SnakeMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SnakeMain.cpp",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\ITI\\SnackGame\\Structured Final\\SnakeStructured\\SFMLPractice\\SnakeMain.cpp",
+              "RelativeDocumentMoniker": "SFMLPractice\\SnakeMain.cpp",
+              "ToolTip": "C:\\Users\\User\\Desktop\\ITI\\SnackGame\\Structured Final\\SnakeStructured\\SFMLPractice\\SnakeMain.cpp*",
+              "RelativeToolTip": "SFMLPractice\\SnakeMain.cpp*",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAkwC0BAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-05T16:18:32.397Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

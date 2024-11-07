@@ -1,0 +1,347 @@
+
+
+//#include <vector>
+//#include <string>
+//#include <ctime>
+//#include <cmath>
+//#include <sstream>
+//#include <fstream>
+//#include <SFML/Graphics.hpp>
+//#include<iostream>
+//using namespace sf;
+//
+//
+//
+//struct MovingObstacle {
+//    RectangleShape shape;
+//    Vector2f position;
+//    Vector2f direction;    // Movement direction (x, y)
+//    float speed;           // Speed of movement
+//    Vector2f size;
+//
+//    // Constructor
+//    MovingObstacle(float x, float y, float width, float height, float speed, char Dir, Vector2f direction) {
+//        if (Dir == 'b') {
+//            speed = speed;
+//            this->direction = direction;
+//            shape.setSize(Vector2f(width, height));
+//            shape.setFillColor(Color::Black);  // Color for the obstacle
+//            shape.setPosition(x, y);
+//        }
+//        else if (Dir == 'p') {
+//            speed = speed;
+//            this->direction = direction;
+//            shape.setSize(Vector2f(width, height));
+//            shape.setFillColor(Color::Blue);  // Color for the obstacle
+//            shape.setPosition(x, y);
+//        }
+//    }
+//};
+//
+//void updateMovingObstacle(MovingObstacle& obstacle, float deltaTime, float windowWidth, float windowHeight);
+//void renderMovingObstacle(RenderTarget& target, const MovingObstacle& obstacle);
+//bool checkCollisionMovingObstacle(const MovingObstacle& obstacle, const Vector2f& snakeHead);
+//
+//void updateMovingObstacle(MovingObstacle& obstacle, float deltaTime, float windowWidth, float windowHeight) {
+//    obstacle.position += obstacle.direction * obstacle.speed * deltaTime;
+//
+//    // Check for boundary collision (assuming a window size of windowWidth x windowHeight)
+//    if (obstacle.position.x <= 0 || obstacle.position.x + obstacle.size.x >= windowWidth) {
+//        // Reverse the horizontal direction
+//        obstacle.direction.x = -obstacle.direction.x;
+//
+//        // Ensure the obstacle stays within bounds
+//        if (obstacle.position.x < 0) obstacle.position.x = 0;
+//        if (obstacle.position.x + obstacle.size.x > windowWidth) obstacle.position.x = windowWidth - obstacle.size.x;
+//    }
+//
+//    if (obstacle.position.y <= 0 || obstacle.position.y + obstacle.size.y >= windowHeight) {
+//        // Reverse the vertical direction
+//        obstacle.direction.y = -obstacle.direction.y;
+//
+//        // Ensure the obstacle stays within bounds
+//        if (obstacle.position.y < 0) obstacle.position.y = 0;
+//        if (obstacle.position.y + obstacle.size.y > windowHeight) obstacle.position.y = windowHeight - obstacle.size.y;
+//    }
+//
+//    obstacle.shape.setPosition(obstacle.position);
+//}
+//
+//// Function to render the obstacle
+//void renderMovingObstacle(RenderTarget& target, const MovingObstacle& obstacle) {
+//    target.draw(obstacle.shape);
+//}
+//
+//// Function to check if a given snake head collides with an obstacle
+//bool checkCollisionMovingObstacle(const MovingObstacle& obstacle, const Vector2f& snakeHead) {
+//    return obstacle.shape.getGlobalBounds().contains(snakeHead);
+//}
+//
+//struct Map {
+//    std::vector<std::string> mapData;  // Stores the map from the file
+//    std::vector<RectangleShape> boundaries;  // Stores boundary shapes
+//};
+//
+//void loadMapFromFile(Map& map, const std::string& filename);
+//void renderMap(RenderTarget& target, const Map& map);
+//bool checkCollisionMap(const Map& map, const Vector2f& position);
+//
+//void loadMapFromFile(Map& map, const std::string& filename) {
+//    std::ifstream file(filename);
+//    if (!file.is_open()) {
+//        std::cerr << "Failed to open map file: " << filename << std::endl;
+//        return;
+//    }
+//
+//    std::string line;
+//    int y = 0;
+//    const int cellSize = 25;
+//
+//    while (std::getline(file, line)) {
+//        map.mapData.push_back(line);
+//        for (int x = 0; x < line.size(); ++x) {
+//            if (line[x] == '1') { // '1' represents a boundary
+//                RectangleShape boundary(Vector2f(cellSize, cellSize));
+//                boundary.setFillColor(Color::Red); // Color for boundary
+//                boundary.setPosition(x * cellSize, y * cellSize);
+//                map.boundaries.push_back(boundary);
+//            }
+//        }
+//        y++;
+//    }
+//}
+//
+//void renderMap(RenderTarget& target, const Map& map) {
+//    for (const auto& boundary : map.boundaries) {
+//        target.draw(boundary);
+//    }
+//}
+//
+//bool checkCollisionMap(const Map& map, const Vector2f& position) {
+//    for (const auto& boundary : map.boundaries) {
+//        if (boundary.getGlobalBounds().contains(position)) {
+//            return true;  // Collision detected
+//        }
+//    }
+//    return false;
+//}
+//
+//RenderWindow* window;
+//VideoMode videoMode;
+//Font fonts;
+//Text uiText;
+//bool endGame = false;
+//unsigned points = 0;
+//int health = 100;
+//int Timer = 180;
+//int speed = 30;
+//bool bonusActive = false;
+//bool Timeboost = false;
+//bool grow = false;
+//int dir = 0;  // Snake direction (0 - right, 1 - left, 2 - down, 3 - up)
+//int growthAmount = 3;  // Number of segments to add on apple pickup
+//
+//struct Point { int x = 0; int y = 0; };
+//std::vector<Point> snake;  // Snake segments
+//Point apple, BonusApple, timePickup;
+//Clock gameClock, timerClock;
+//std::vector<MovingObstacle> obstacles, obstaclesPoints;
+//Map map;  // Instance of the Map struct
+//
+//// Create a window for the game
+//void createWindow() {
+//    videoMode.height = 800;
+//    videoMode.width = 800;
+//    window = new RenderWindow(videoMode, "Snake", sf::Style::Titlebar | sf::Style::Close | sf::Style::Resize);
+//    window->setFramerateLimit(30);
+//}
+//
+//// Initialize fonts
+//void initFonts() {
+//    if (!fonts.loadFromFile("Fonts/Roboto-Black.ttf")) {
+//        std::cout << "Error loading font" << std::endl;
+//    }
+//}
+//
+//// Initialize text
+//void initText() {
+//    uiText.setFont(fonts);
+//    uiText.setCharacterSize(30);
+//    uiText.setFillColor(Color::White);
+//    uiText.setString("None");
+//}
+//
+//// Spawn apple at a random position within the grid
+//void spawnApple() {
+//    const int gridSize = 5; // Align with snake movement step size
+//    do {
+//        apple.x = (rand() % (600 / gridSize)) * gridSize;
+//        apple.y = (rand() % (600 / gridSize)) * gridSize;
+//    } while (checkCollisionMap(map, Vector2f(apple.x, apple.y)));
+//
+//    if (rand() % 4 == 0) {
+//        do {
+//            BonusApple.x = (rand() % (600 / gridSize)) * gridSize;
+//            BonusApple.y = (rand() % (600 / gridSize)) * gridSize;
+//        } while (checkCollisionMap(map, Vector2f(BonusApple.x, BonusApple.y)));
+//        bonusActive = true;
+//    }
+//    else {
+//        bonusActive = false;
+//    }
+//
+//    if (rand() % 5 == 0) {
+//        do {
+//            timePickup.x = (rand() % (600 / gridSize)) * gridSize;
+//            timePickup.y = (rand() % (600 / gridSize)) * gridSize;
+//        } while (checkCollisionMap(map, Vector2f(timePickup.x, timePickup.y)));
+//        Timeboost = true;
+//    }
+//    else {
+//        Timeboost = false;
+//    }
+//}
+//
+//// Update the snake's movement and growth
+//void updateSnake() {
+//    const int stepSize = 5;
+//    const int collisionRadius = 30; // Larger radius for easier apple pickup
+//
+//    Point newHead = snake[0];
+//    if (dir == 0) newHead.x += stepSize;  // Move right
+//    if (dir == 1) newHead.x -= stepSize;  // Move left
+//    if (dir == 2) newHead.y += stepSize;  // Move down
+//    if (dir == 3) newHead.y -= stepSize;  // Move up
+//
+//    Vector2f headPosition(newHead.x, newHead.y);
+//    if (checkCollisionMap(map, headPosition)) {
+//        endGame = true;
+//        return;
+//    }
+//
+//    // Check for boundary collision
+//    if (newHead.x < 0 || newHead.x >= 800 || newHead.y < 0 || newHead.y >= 800) {
+//        endGame = true;
+//        return;
+//    }
+//
+//    // Check for self-collision
+//    for (const auto& segment : snake) {
+//        if (newHead.x == segment.x && newHead.y == segment.y) {
+//            endGame = true;
+//            return;
+//        }
+//    }
+//
+//    // Check for apple collision
+//    float distance = sqrt(pow(newHead.x - apple.x, 2) + pow(newHead.y - apple.y, 2));
+//    if (distance < collisionRadius) {
+//        grow = true;
+//        growthAmount = 3;
+//        points += 10;
+//        health += 5;
+//        speed++;
+//        window->setFramerateLimit(speed);
+//        spawnApple();
+//    }
+//
+//    // Check for bonus apple collision
+//    if (bonusActive) {
+//        distance = sqrt(pow(newHead.x - BonusApple.x, 2) + pow(newHead.y - BonusApple.y, 2));
+//        if (distance < collisionRadius) {
+//            grow = true;
+//            growthAmount = 6;
+//            points += 25;
+//            health -= 50;
+//            bonusActive = false;
+//            spawnApple();
+//            speed++;
+//            window->setFramerateLimit(speed);
+//        }
+//    }
+//
+//    // Check for time boost pickup
+//    if (Timeboost) {
+//        distance = sqrt(pow(newHead.x - timePickup.x, 2) + pow(newHead.y - timePickup.y, 2));
+//        if (distance < collisionRadius) {
+//            Timer += 20;
+//            Timeboost = false;
+//            speed--;
+//            window->setFramerateLimit(speed);
+//        }
+//    }
+//
+//    snake.insert(snake.begin(), newHead);
+//    if (!grow) {
+//        snake.pop_back();
+//    }
+//    else {
+//        growthAmount--;
+//        if (growthAmount <= 0) grow = false;
+//    }
+//
+//    // Draw the snake segments
+//    RectangleShape segment(Vector2f(25.f, 25.f));
+//    segment.setFillColor(Color::Cyan);
+//    for (const auto& s : snake) {
+//        segment.setPosition(s.x, s.y);
+//        window->draw(segment);
+//    }
+//
+//    // Draw the apple
+//    RectangleShape appleShape(Vector2f(20.f, 20.f));
+//    appleShape.setFillColor(Color::Green);
+//    appleShape.setPosition(apple.x, apple.y);
+//    window->draw(appleShape);
+//}
+//
+//// Render the game screen
+//void render() {
+//    window->clear();
+//    renderMap(*window, map);  // Use the map's render function
+//    updateSnake();
+//    window->display();
+//}
+//
+//// Handle events (key presses)
+//void processInput(sf::Event event) {
+//    if (event.type == Event::Closed) {
+//        window->close();
+//    }
+//    if (event.type == Event::KeyPressed) {
+//        if (event.key.code == Keyboard::Up && dir != 2) dir = 3;
+//        if (event.key.code == Keyboard::Down && dir != 3) dir = 2;
+//        if (event.key.code == Keyboard::Left && dir != 0) dir = 1;
+//        if (event.key.code == Keyboard::Right && dir != 1) dir = 0;
+//    }
+//}
+//
+//int main() {
+//    srand(static_cast<unsigned>(time(NULL)));
+//    createWindow();
+//    initFonts();
+//    initText();
+//
+//    snake.push_back(Point{ 100, 100 });
+//    spawnApple();
+//
+//    // Main game loop
+//    while (window->isOpen() && !endGame) {
+//        Event event;
+//        while (window->pollEvent(event)) {
+//            processInput(event);
+//        }
+//
+//        // Update game state
+//        if (!endGame) {
+//            float deltaTime = gameClock.restart().asSeconds();
+//            updateSnake();
+//        }
+//
+//        // Render everything
+//        render();
+//    }
+//
+//    window->close();
+//    return 0;
+//}
