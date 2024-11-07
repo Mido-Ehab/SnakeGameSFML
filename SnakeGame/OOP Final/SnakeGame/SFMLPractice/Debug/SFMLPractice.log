@@ -1,0 +1,76 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (SFMLPractice.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Game1.cpp
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,55): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,55): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,55): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,55): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,55): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,47): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,47): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,47): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,47): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(109,47): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,70): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,70): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,70): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,70): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,70): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,56): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,56): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,56): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,56): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(117,56): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,69): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,69): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,69): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,69): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,69): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,55): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,55): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,55): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,55): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(128,55): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(138,60): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,45): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,45): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,45): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,45): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,45): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,34): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,34): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,34): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,34): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(176,34): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(204,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(223,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(239,24): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(268,35): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(268,30): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(275,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(275,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(283,56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(283,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(290,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(290,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,66): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,66): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,66): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,66): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,54): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,54): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,54): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,54): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(311,54): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,66): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,66): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,66): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,66): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,66): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,54): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,54): warning C4244:         with
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,54): warning C4244:         [
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,54): warning C4244:             T=float
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(335,54): warning C4244:         ]
+C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\SFMLPractice\Game1.cpp(353,23): warning C4018: '<': signed/unsigned mismatch
+  SFMLPractice.vcxproj -> C:\Users\User\Desktop\ITI\SnackGame\OOP Final\SnakeGame\Debug\SnakeGame.exe
